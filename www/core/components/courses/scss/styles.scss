@@ -125,3 +125,39 @@ mm-course-list-item .item-icon-left {
   max-width: 20px;
   max-height: 34px;
 }
+
+/* Custom styles */
+
+a.card-course {
+    padding: 0px;
+}
+.img-course-mobile img {
+    width: 100%;
+}
+.img-course-mobile {
+    height: 85px;
+    overflow: hidden;
+}
+.progress-container-mobile h2{
+  font-size: 1em;
+  color: #005e8d;
+}
+.progress-container-mobile {
+    padding: 10px 30px 5px 16px;
+}
+.card-course-mobile {
+    margin: 10px 0px;
+    box-shadow: 0 3px 6px rgba(0,0,0,.36);
+}
+.img-logoido-mobile {
+    margin: -20px auto 0px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    padding: 2px;
+}
+.img-logoido-mobile img {
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}

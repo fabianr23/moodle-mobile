@@ -40,7 +40,7 @@ angular.module('mm.addons.myoverview')
         loaded: false,
         filter: ''
     };
-    $scope.showGrid = true;
+    $scope.showGrid = false;
     $scope.showFilter = false;
 
     $scope.searchEnabled = $mmCourses.isSearchCoursesAvailable() && !$mmCourses.isSearchCoursesDisabledInSite();
@@ -116,7 +116,15 @@ angular.module('mm.addons.myoverview')
             courseIds = courses.map(function(course) {
                 return course.id;
             });
-
+            // Mapping courses to add the img element to each one
+            courses.map(function(course){
+                $mmCourses.getCoursesByField("id",course.id ).then(function(courseinf) {
+                    var imgurl = courseinf[0].overviewfiles[0].fileurl;//getting img url
+                    var imgurlcorrect = imgurl.replace('webservice/', '');
+                    course.img = imgurlcorrect; //add img path to course object
+                });
+            });
+            
             // Load course options of the course.
             return $mmCourses.getCoursesOptions(courseIds).then(function(options) {
                 angular.forEach(courses, function(course) {

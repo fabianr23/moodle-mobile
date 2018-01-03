@@ -299,7 +299,7 @@ angular.module('mm.core.courses')
         } else if (ids.length === 0) {
             return $q.when([]);
         }
-
+        //console.log("get courses ---***-----");
         return $mmSitesManager.getSite(siteid).then(function(site) {
 
             var data = {
@@ -532,6 +532,7 @@ angular.module('mm.core.courses')
             angular.forEach(courses, function(c) {
                 if (c.id == id) {
                     course = c;
+                    console.log(course);
                 }
             });
             return course ? course : $q.reject();
@@ -572,6 +573,8 @@ angular.module('mm.core.courses')
                     // Only store courses if we're getting current site courses. This function is deprecated and will be removed.
                     storeCoursesInMemory(courses);
                 }
+                //console.log("Return ids: ");
+                //console.log(courses);
                 return courses;
             });
         });

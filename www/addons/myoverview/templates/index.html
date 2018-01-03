@@ -5,10 +5,10 @@
     <ion-content mm-state-class>
         <ion-refresher pulling-text="{{ 'mm.core.pulltorefresh' | translate }}" ng-if="timeline.loaded || timelineCourses.loaded || courses.loaded" on-refresh="refreshMyOverview()">
         </ion-refresher>
-        <div class="tabs tabs-striped tabs-free mm-tabs-color">
+        <!--<div class="tabs tabs-striped tabs-free mm-tabs-color">
             <a class="tab-item" ng-class="{'active': tabShown == 'timeline'}" ng-click="switchTab('timeline')">{{ 'mma.myoverview.timeline' | translate }}</a>
             <a class="tab-item" ng-class="{'active': tabShown == 'courses'}" ng-click="switchTab('courses')">{{ 'mm.courses.courses' | translate }}</a>
-        </div>
+        </div>-->
         <div class="padding">
             <div class="item-select mm-full-width-centered mm-timelinesort" ng-show="tabShown == 'timeline' && (timeline.loaded || timelineCourses.loaded)">
                 <select ng-model="timeline.sort" ng-change="switchSort()">
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div class="col-10 text-right">
-                        <a ng-class="{'ion-android-apps': !showGrid, 'ion-ios-list-outline': showGrid}" class="button button-dark button-icon icon" ng-click="switchGrid()"></a>
+                        <!--<a ng-class="{'ion-android-apps': !showGrid, 'ion-ios-list-outline': showGrid}" class="button button-dark button-icon icon" ng-click="switchGrid()"></a>-->
                     </div>
                 </div>
                 <div ng-show="showFilter" class="item mm-filter-box item-input-inset">

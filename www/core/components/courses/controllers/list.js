@@ -46,6 +46,7 @@ angular.module('mm.core.courses')
                     course.admOptions = options.admOptions[course.id];
                 });
                 $scope.courses = courses;
+                console.log("cursos: ", courses);
             });
         }, function(error) {
             $mmUtil.showErrorModalDefault(error, 'mm.courses.errorloadcourses', true);
