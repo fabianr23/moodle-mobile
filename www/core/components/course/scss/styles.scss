@@ -14,3 +14,36 @@ mm-course-mod-description .card .item {
 .padding mm-course-mod-description .card {
   margin-top: 0;
 }
+
+/*** Custom styles ****/
+.container-iframe {
+    height: 450px;
+    overflow: hidden;
+}
+h2.section-title {
+    font-weight: bold;
+    color: #000;
+    font-size: 17px;
+}
+.section-divider {
+    background: #fff;
+    border: 0px !important;
+    padding-top: 20px;
+}
+.card-section-item {
+    border: 0px;
+}
+.item-section-link {
+    padding: 0;
+    border-top: 3px solid #25bae0;
+    width: 96%;
+    margin: 0 auto 4px;
+}
+.card-allsections {
+    background: #fff;
+}
+span.learning-consolidation {
+    font-size: 15px !important;
+    color: #333333 !important;
+    font-weight: normal;
+}

@@ -33,7 +33,8 @@ angular.module('mm.core.course')
     $scope.courseId = courseId;
     $scope.sectionToLoad = 2; // Load "General" section by default.
     $scope.fullname = course.fullname || "";
-    $scope.downloadSectionsEnabled = $mmCourseHelper.isDownloadSectionsEnabled();
+    //$scope.downloadSectionsEnabled = $mmCourseHelper.isDownloadSectionsEnabled();
+    $scope.downloadSectionsEnabled = true;
     $scope.downloadSectionsIcon = getDownloadSectionIcon();
     $scope.sectionHasContent = $mmCourseHelper.sectionHasContent;
     $scope.courseActions = [];

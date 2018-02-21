@@ -55,6 +55,8 @@ angular.module('mm.addons.mod_scorm')
 
     // Convenience function to get SCORM data.
     function fetchScormData(refresh, checkCompletion, showErrors) {
+        console.log("download scorm -------------***********");
+        downloadScormPackage();
         $scope.isOnline = $mmApp.isOnline();
         return $mmaModScorm.getScorm(courseid, module.id, module.url).then(function(scormData) {
             scorm = scormData;
@@ -400,7 +402,6 @@ angular.module('mm.addons.mod_scorm')
     $scope.open = function(e, scoId) {
         e.preventDefault();
         e.stopPropagation();
-
         if ($scope.downloading) {
             // Scope is being downloaded, abort.
             return;
