@@ -1821,3 +1821,19 @@ ol.list-with-style, ul.list-with-style {
 .text-danger {
   color: $mm-error-color;
 }
+
+/* Custom styles */
+.menu .scroll-content{
+  background: #00b4e2;
+}
+ul.list.dark li.item.item-divider {
+    min-height: 5px;
+    padding: 0px;
+    margin-top: 30px;
+}
+.img-logoido-mobile img {
+    background: #fff;
+}
+.mm-bglogo {
+    background: #fff !important;
+}
