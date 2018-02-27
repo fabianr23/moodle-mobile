@@ -1837,3 +1837,9 @@ ul.list.dark li.item.item-divider {
 .mm-bglogo {
     background: #fff !important;
 }
+progress .progress-bar-fallback span, progress[value]::-webkit-progress-value{
+  background: #8bc34a !important;
+}
+.ion-android-more-vertical {
+    display: none;
+}
